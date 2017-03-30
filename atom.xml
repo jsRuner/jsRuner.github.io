@@ -64,8 +64,8 @@
   
   <entry>
     <title>自动钓鱼脚本优化</title>
-    <link href="blog.wuwenfu.cn/2016/10/18/%C2%B5o%CC%88O%CC%81a%CC%83%C2%BDA%CC%8A%C2%B1%C2%BE%C2%B5A%CC%88O%CC%81A%CC%8A%C2%BB%C2%AF/"/>
-    <id>blog.wuwenfu.cn/2016/10/18/µöÓã½Å±¾µÄÓÅ»¯/</id>
+    <link href="blog.wuwenfu.cn/2016/10/18/%E8%87%AA%E5%8A%A8%E9%92%93%E9%B1%BC%E8%84%9A%E6%9C%AC/"/>
+    <id>blog.wuwenfu.cn/2016/10/18/自动钓鱼脚本/</id>
     <published>2016-10-18T01:51:35.000Z</published>
     <updated>2016-10-18T01:57:20.000Z</updated>
     
@@ -110,8 +110,8 @@
   
   <entry>
     <title>制作带目录的文档</title>
-    <link href="blog.wuwenfu.cn/2016/09/28/%C3%90%C2%AF%C2%B4%C3%B8A%CC%88%C2%BFA%CC%82%C2%BC%C2%B5A%CC%88I%CC%82A%CC%88%C2%B5%C2%B5A%CC%88%C2%A3%C2%B0%C3%A6/"/>
-    <id>blog.wuwenfu.cn/2016/09/28/Ð¯´øÄ¿Â¼µÄÎÄµµÄ£°æ/</id>
+    <link href="blog.wuwenfu.cn/2016/09/28/%E5%88%B6%E4%BD%9C%E5%B8%A6%E7%9B%AE%E5%BD%95%E7%9A%84%E6%96%87%E6%A1%A3/"/>
+    <id>blog.wuwenfu.cn/2016/09/28/制作带目录的文档/</id>
     <published>2016-09-28T05:30:06.000Z</published>
     <updated>2016-09-28T05:42:08.000Z</updated>
     
@@ -147,8 +147,8 @@
   
   <entry>
     <title>魔兽插件开发（2）-自动钓鱼脚本开发</title>
-    <link href="blog.wuwenfu.cn/2016/08/30/A%CC%88%C2%A7E%CC%82%C3%9EE%CC%82A%CC%80%C2%BDc%CC%A7%C2%B2a%CC%8A%C2%BC%C3%BE-2-%C2%B5o%CC%88O%CC%81a%CC%83%C2%BDA%CC%8A%C2%B1%C2%BE%C2%BF%C2%AA%C2%B7%C2%A2/"/>
-    <id>blog.wuwenfu.cn/2016/08/30/Ä§ÊÞÊÀ½ç²å¼þ-2-µöÓã½Å±¾¿ª·¢/</id>
+    <link href="blog.wuwenfu.cn/2016/08/30/%E9%AD%94%E5%85%BD%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%912/"/>
+    <id>blog.wuwenfu.cn/2016/08/30/魔兽插件开发2/</id>
     <published>2016-08-30T00:31:08.000Z</published>
     <updated>2016-08-30T00:49:17.000Z</updated>
     
@@ -222,8 +222,8 @@ end`
   
   <entry>
     <title>魔兽插件开发（1）-魔兽笔记</title>
-    <link href="blog.wuwenfu.cn/2016/08/20/A%CC%88%C2%A7E%CC%82%C3%9E%C2%B2a%CC%8A%C2%BC%C3%BE%C2%BF%C2%AA%C2%B7%C2%A2%C2%A3%C2%A81%C2%A3%C2%A9-A%CC%88%C2%A7E%CC%82%C3%9E%C2%B1E%CC%82%C2%BCC%CC%A7/"/>
-    <id>blog.wuwenfu.cn/2016/08/20/Ä§ÊÞ²å¼þ¿ª·¢£¨1£©-Ä§ÊÞ±Ê¼Ç/</id>
+    <link href="blog.wuwenfu.cn/2016/08/20/%E9%AD%94%E5%85%BD%E6%8F%92%E4%BB%B61/"/>
+    <id>blog.wuwenfu.cn/2016/08/20/魔兽插件1/</id>
     <published>2016-08-20T09:44:19.000Z</published>
     <updated>2016-08-20T09:57:36.000Z</updated>
     
@@ -265,8 +265,8 @@ end`
   
   <entry>
     <title>php如何安装redis扩展</title>
-    <link href="blog.wuwenfu.cn/2016/08/12/php%C2%B0%C2%B2%C3%97%C2%B0redisA%CC%80%C2%A9O%CC%83%C2%B9/"/>
-    <id>blog.wuwenfu.cn/2016/08/12/php°²×°redisÀ©Õ¹/</id>
+    <link href="blog.wuwenfu.cn/2016/08/12/%E4%B8%BAphp%E5%AE%89%E8%A3%85redis%E6%89%A9%E5%B1%95/"/>
+    <id>blog.wuwenfu.cn/2016/08/12/为php安装redis扩展/</id>
     <published>2016-08-12T13:13:59.000Z</published>
     <updated>2016-08-12T13:47:23.000Z</updated>
     
@@ -336,8 +336,8 @@ extension=redis.so
   
   <entry>
     <title>php图片裁剪类的学习</title>
-    <link href="blog.wuwenfu.cn/2016/07/31/grafika-phpI%CC%81%C2%BC%C3%86%C2%AC%C2%B2A%CC%83%C2%BCo%CC%82A%CC%80a%CC%80%C2%B5A%CC%88N%CC%83%C2%A7I%CC%88%C2%B0/"/>
-    <id>blog.wuwenfu.cn/2016/07/31/grafika-phpÍ¼Æ¬²Ã¼ôÀàµÄÑ§Ï°/</id>
+    <link href="blog.wuwenfu.cn/2016/07/31/%E5%9B%BE%E7%89%87%E8%A3%81%E5%89%AA%E7%B1%BB%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>blog.wuwenfu.cn/2016/07/31/图片裁剪类库的使用/</id>
     <published>2016-07-31T03:01:39.000Z</published>
     <updated>2016-07-31T03:03:47.000Z</updated>
     
@@ -458,8 +458,8 @@ $editor-&gt;save(&apos;testCrop9.jpg&apos;);
   
   <entry>
     <title>shell脚本的编写</title>
-    <link href="blog.wuwenfu.cn/2016/07/19/shell%C2%BDA%CC%8A%C2%B1%C2%BE%C2%B5A%CC%88%C2%B1a%CC%80%C3%90%C2%B4/"/>
-    <id>blog.wuwenfu.cn/2016/07/19/shell½Å±¾µÄ±àÐ´/</id>
+    <link href="blog.wuwenfu.cn/2016/07/19/shell%E8%84%9A%E6%9C%AC/"/>
+    <id>blog.wuwenfu.cn/2016/07/19/shell脚本/</id>
     <published>2016-07-19T12:39:33.000Z</published>
     <updated>2016-07-19T13:37:26.000Z</updated>
     
@@ -529,8 +529,8 @@ $editor-&gt;save(&apos;testCrop9.jpg&apos;);
   
   <entry>
     <title>推荐一首歌</title>
-    <link href="blog.wuwenfu.cn/2016/07/09/I%CC%81%C3%86%C2%BCo%CC%88O%CC%80%C2%BBE%CC%82%C3%97%C2%B8e%CC%80/"/>
-    <id>blog.wuwenfu.cn/2016/07/09/ÍÆ¼öÒ»Ê×¸è/</id>
+    <link href="blog.wuwenfu.cn/2016/07/09/%E5%8A%A8%E5%90%AC%E7%9A%84%E6%AD%8C%E6%9B%B2/"/>
+    <id>blog.wuwenfu.cn/2016/07/09/动听的歌曲/</id>
     <published>2016-07-09T14:40:46.000Z</published>
     <updated>2016-07-09T14:44:02.000Z</updated>
     
@@ -554,8 +554,8 @@ $editor-&gt;save(&apos;testCrop9.jpg&apos;);
   
   <entry>
     <title>阅读CodeIgniter手册(一)</title>
-    <link href="blog.wuwenfu.cn/2016/07/09/O%CC%82A%CC%88%C2%B6A%CC%81CodeIgnterE%CC%82O%CC%88%C2%B2a%CC%81/"/>
-    <id>blog.wuwenfu.cn/2016/07/09/ÔÄ¶ÁCodeIgnterÊÖ²á/</id>
+    <link href="blog.wuwenfu.cn/2016/07/09/%E9%87%8D%E8%AF%BBcodeigniter%E6%89%8B%E5%86%8C/"/>
+    <id>blog.wuwenfu.cn/2016/07/09/重读codeigniter手册/</id>
     <published>2016-07-09T07:45:52.000Z</published>
     <updated>2016-07-14T01:12:05.000Z</updated>
     
@@ -621,8 +621,8 @@ $editor-&gt;save(&apos;testCrop9.jpg&apos;);
   
   <entry>
     <title>网易云音乐重写</title>
-    <link href="blog.wuwenfu.cn/2016/07/08/I%CC%81%C3%B8O%CC%80%C3%97O%CC%82%C3%86O%CC%80o%CC%82A%CC%80O%CC%88O%CC%88%C3%98%C3%90%C2%B4/"/>
-    <id>blog.wuwenfu.cn/2016/07/08/ÍøÒ×ÔÆÒôÀÖÖØÐ´/</id>
+    <link href="blog.wuwenfu.cn/2016/07/08/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/"/>
+    <id>blog.wuwenfu.cn/2016/07/08/网易云音乐/</id>
     <published>2016-07-08T01:06:37.000Z</published>
     <updated>2016-07-08T01:17:36.000Z</updated>
     
@@ -676,8 +676,8 @@ if(r==null){
   
   <entry>
     <title>南京4天</title>
-    <link href="blog.wuwenfu.cn/2016/06/29/A%CC%88I%CC%88%C2%BE%C2%A94I%CC%80i%CC%80/"/>
-    <id>blog.wuwenfu.cn/2016/06/29/ÄÏ¾©4Ìì/</id>
+    <link href="blog.wuwenfu.cn/2016/06/29/%E5%8D%97%E4%BA%AC%E7%BE%8E%E6%99%AF/"/>
+    <id>blog.wuwenfu.cn/2016/06/29/南京美景/</id>
     <published>2016-06-29T08:50:47.000Z</published>
     <updated>2016-06-29T08:54:46.000Z</updated>
     
@@ -697,9 +697,9 @@ if(r==null){
       <category term="博客" scheme="blog.wuwenfu.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="生活" scheme="blog.wuwenfu.cn/tags/%E7%94%9F%E6%B4%BB/"/>
-    
       <category term="南京" scheme="blog.wuwenfu.cn/tags/%E5%8D%97%E4%BA%AC/"/>
+    
+      <category term="生活" scheme="blog.wuwenfu.cn/tags/%E7%94%9F%E6%B4%BB/"/>
     
       <category term="旅游" scheme="blog.wuwenfu.cn/tags/%E6%97%85%E6%B8%B8/"/>
     
@@ -707,8 +707,8 @@ if(r==null){
   
   <entry>
     <title>南京我来了</title>
-    <link href="blog.wuwenfu.cn/2016/06/20/A%CC%88I%CC%88%C2%BE%C2%A9I%CC%82O%CC%80A%CC%80%C2%B4A%CC%81E%CC%88/"/>
-    <id>blog.wuwenfu.cn/2016/06/20/ÄÏ¾©ÎÒÀ´ÁË/</id>
+    <link href="blog.wuwenfu.cn/2016/06/20/%E5%8D%97%E4%BA%AC/"/>
+    <id>blog.wuwenfu.cn/2016/06/20/南京/</id>
     <published>2016-06-20T02:41:14.000Z</published>
     <updated>2016-06-20T02:42:33.000Z</updated>
     
@@ -725,16 +725,16 @@ if(r==null){
       <category term="博客" scheme="blog.wuwenfu.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="南京" scheme="blog.wuwenfu.cn/tags/%E5%8D%97%E4%BA%AC/"/>
-    
       <category term="微信" scheme="blog.wuwenfu.cn/tags/%E5%BE%AE%E4%BF%A1/"/>
+    
+      <category term="南京" scheme="blog.wuwenfu.cn/tags/%E5%8D%97%E4%BA%AC/"/>
     
   </entry>
   
   <entry>
     <title>充满欺骗的社会</title>
-    <link href="blog.wuwenfu.cn/2016/06/15/%C2%B3a%CC%88A%CC%82u%CC%81%C3%86U%CC%82%C3%86%C2%AD%C2%B5A%CC%88E%CC%81c%CC%A7%C2%BBa%CC%81/"/>
-    <id>blog.wuwenfu.cn/2016/06/15/³äÂúÆÛÆ­µÄÉç»á/</id>
+    <link href="blog.wuwenfu.cn/2016/06/15/%E7%A4%BE%E4%BC%9A%E8%B4%9F%E9%9D%A2%E4%B9%8B%E6%88%91%E8%A7%81/"/>
+    <id>blog.wuwenfu.cn/2016/06/15/社会负面之我见/</id>
     <published>2016-06-15T00:40:29.000Z</published>
     <updated>2016-06-15T00:47:11.000Z</updated>
     
@@ -765,8 +765,8 @@ if(r==null){
   
   <entry>
     <title>网易云音乐插件完成</title>
-    <link href="blog.wuwenfu.cn/2016/06/11/I%CC%81%C3%B8O%CC%80%C3%97O%CC%82%C3%86O%CC%80o%CC%82A%CC%80O%CC%88/"/>
-    <id>blog.wuwenfu.cn/2016/06/11/ÍøÒ×ÔÆÒôÀÖ/</id>
+    <link href="blog.wuwenfu.cn/2016/06/11/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90%E5%BC%80%E5%8F%91/"/>
+    <id>blog.wuwenfu.cn/2016/06/11/网易云音乐开发/</id>
     <published>2016-06-11T14:33:22.000Z</published>
     <updated>2016-06-11T14:38:57.000Z</updated>
     
@@ -804,10 +804,10 @@ if(r==null){
   
   <entry>
     <title>端午节快乐</title>
-    <link href="blog.wuwenfu.cn/2016/06/06/%C2%B6E%CC%88I%CC%82c%CC%A7%C2%BDU%CC%81%C2%BFi%CC%80A%CC%80O%CC%88/"/>
-    <id>blog.wuwenfu.cn/2016/06/06/¶ËÎç½Ú¿ìÀÖ/</id>
+    <link href="blog.wuwenfu.cn/2016/06/06/%E7%AB%AF%E5%8D%88%E8%8A%82%E5%BF%AB%E4%B9%90/"/>
+    <id>blog.wuwenfu.cn/2016/06/06/端午节快乐/</id>
     <published>2016-06-06T13:25:13.000Z</published>
-    <updated>2016-06-06T13:26:56.000Z</updated>
+    <updated>2017-03-30T13:03:04.000Z</updated>
     
     <content type="html"><![CDATA[<a id="more"></a>
 <p><img src="http://o8cq9a9tm.bkt.clouddn.com/IMG_20160606_170746.jpg" alt=""></p>
@@ -832,8 +832,8 @@ if(r==null){
   
   <entry>
     <title>一切从收费开始</title>
-    <link href="blog.wuwenfu.cn/2016/06/06/O%CC%80%C2%BBC%CC%A7%C3%90%C2%B4O%CC%81E%CC%82O%CC%83%C2%B7N%CC%83%C2%BF%C2%AAE%CC%82%C2%BC/"/>
-    <id>blog.wuwenfu.cn/2016/06/06/Ò»ÇÐ´ÓÊÕ·Ñ¿ªÊ¼/</id>
+    <link href="blog.wuwenfu.cn/2016/06/06/%E6%94%B6%E8%B4%B9%E9%97%AE%E9%A2%98%E4%B9%8B%E6%88%91%E8%A7%81/"/>
+    <id>blog.wuwenfu.cn/2016/06/06/收费问题之我见/</id>
     <published>2016-06-06T11:47:37.000Z</published>
     <updated>2016-06-06T11:57:56.000Z</updated>
     
@@ -866,8 +866,8 @@ if(r==null){
   
   <entry>
     <title>账号分享插件完成</title>
-    <link href="blog.wuwenfu.cn/2016/06/05/O%CC%83E%CC%88%C2%BAA%CC%8A%C2%B7O%CC%88I%CC%88i%CC%81%C2%B2a%CC%8A%C2%BC%C3%BE%C2%B5A%CC%88I%CC%81e%CC%82%C2%B3E%CC%81/"/>
-    <id>blog.wuwenfu.cn/2016/06/05/ÕËºÅ·ÖÏí²å¼þµÄÍê³É/</id>
+    <link href="blog.wuwenfu.cn/2016/06/05/%E8%B4%A6%E5%8F%B7%E5%88%86%E4%BA%AB%E6%8F%92%E4%BB%B6/"/>
+    <id>blog.wuwenfu.cn/2016/06/05/账号分享插件/</id>
     <published>2016-06-05T10:18:45.000Z</published>
     <updated>2016-06-05T10:18:47.000Z</updated>
     
@@ -895,8 +895,8 @@ if(r==null){
   
   <entry>
     <title>糗事采集收费版插件完成</title>
-    <link href="blog.wuwenfu.cn/2016/06/03/o%CC%82U%CC%88E%CC%82A%CC%82%C2%B2E%CC%81%C2%BC%C2%AFE%CC%82O%CC%83%C2%B7N%CC%83%C2%B0%C3%A6%C2%B1%C2%BEE%CC%81I%CC%88I%CC%88%C3%9F/"/>
-    <id>blog.wuwenfu.cn/2016/06/03/ôÜÊÂ²É¼¯ÊÕ·Ñ°æ±¾ÉÏÏß/</id>
+    <link href="blog.wuwenfu.cn/2016/06/03/%E7%B3%97%E4%BA%8B%E7%99%BE%E7%A7%91%E6%8F%92%E4%BB%B6/"/>
+    <id>blog.wuwenfu.cn/2016/06/03/糗事百科插件/</id>
     <published>2016-06-03T10:32:05.000Z</published>
     <updated>2016-06-03T10:35:04.000Z</updated>
     
@@ -926,8 +926,8 @@ if(r==null){
   
   <entry>
     <title>北岸QQ登录插件完成</title>
-    <link href="blog.wuwenfu.cn/2016/06/01/%C2%B1%C2%B1%C2%B0%C2%B6QQ%C2%B5C%CC%A7A%CC%82%C2%BC%C2%B2a%CC%8A%C2%BC%C3%BEI%CC%81e%CC%82%C2%B3E%CC%81/"/>
-    <id>blog.wuwenfu.cn/2016/06/01/±±°¶QQµÇÂ¼²å¼þÍê³É/</id>
+    <link href="blog.wuwenfu.cn/2016/06/01/QQ%E7%99%BB%E5%BD%95%E6%8F%92%E4%BB%B6%E5%88%B6%E4%BD%9C/"/>
+    <id>blog.wuwenfu.cn/2016/06/01/QQ登录插件制作/</id>
     <published>2016-06-01T05:24:17.000Z</published>
     <updated>2016-06-01T05:28:03.000Z</updated>
     
