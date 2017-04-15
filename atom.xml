@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="blog.wuwenfu.cn/"/>
-  <updated>2017-04-15T00:59:49.000Z</updated>
+  <updated>2017-04-15T11:20:50.000Z</updated>
   <id>blog.wuwenfu.cn/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ueditor的双引号转义引发的问题</title>
+    <link href="blog.wuwenfu.cn/2017/04/15/ueditor%E7%9A%84%E5%8F%8C%E5%BC%95%E5%8F%B7%E8%BD%AC%E4%B9%89%E5%BC%95%E5%8F%91%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>blog.wuwenfu.cn/2017/04/15/ueditor的双引号转义引发的问题/</id>
+    <published>2017-04-15T11:00:12.000Z</published>
+    <updated>2017-04-15T11:20:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<p>撸了一个站，里面使用了富文本,自然首选百度家的ueditor</p>
+<p>本地测试没问题，提交了代码到线上。结果发现富文本无法正常显示。</p>
+<p>遇到这个问题，我首先查看了数据库里存储的值，发现值被二次转义。</p>
+<p>因为这个站，是基于thinkphp框架写的，接受数据是使用的thinkphp的i函数。</p>
+<p>框架会自动进行全局过滤。因此这里修改函数，只接受原生的get和post数据。</p>
+<p>thinkphp获取原始内容的方法</p>
+<pre><code>I(&apos;get.name&apos;,&apos;&apos;,NULL);
+</code></pre><p>二次转义的问题得到解决，但是还无法工作，主要特征就是所有的引号多了一个\</p>
+<p>这个问题让我不明白问题，以为是thinkphp框架的问题。多次百度之后，查询到问题。</p>
+<p>服务器的php版本是5.3 ，</p>
+<pre><code>magic_quotes_gpc=On
+</code></pre><p>magic_quotes_gpc函数在php中的作用是判断解析用户提示的数据，如包括有:post、get、cookie过来的数据增加转义字符“\”，以确保这些数据不会引起程序，特别是数据库语句因为特殊字符引起的污染而出现致命的错误</p>
+<p>只需要设置为off 即可消除那个多余\。 但是服务器是虚拟机主机，我只有ftp的权限。所以只能另想其他方法。</p>
+<p>最后的方法是:</p>
+<pre><code> $data[&apos;intro&apos;] = I(&apos;post.intro&apos;,&apos;&apos;,null);
+if (ini_get(&apos;magic_quotes_gpc&apos;)) {
+     $data[&apos;intro&apos;] = str_replace(&apos;\&amp;quot;&apos;, &apos;&amp;quot;&apos;, $data[&apos;intro&apos;]);
+}
+</code></pre><p>网络上有人建议放在入口文件index.php中，我测试了下，无效。于是还是按上面 进行。</p>
+<p>最后放一下这个问题的来源站点。</p>
+<p><a href="http://www.dengbiao007.com" target="_blank" rel="external">邓彪个人站</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      引号转义
+    
+    </summary>
+    
+      <category term="博客" scheme="blog.wuwenfu.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="thinkphp" scheme="blog.wuwenfu.cn/tags/thinkphp/"/>
+    
+      <category term="ueditor" scheme="blog.wuwenfu.cn/tags/ueditor/"/>
+    
+  </entry>
   
   <entry>
     <title>别在为图床的问题烦恼了</title>
@@ -85,9 +131,9 @@
       <category term="博客" scheme="blog.wuwenfu.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="验证码" scheme="blog.wuwenfu.cn/tags/%E9%AA%8C%E8%AF%81%E7%A0%81/"/>
-    
       <category term="php" scheme="blog.wuwenfu.cn/tags/php/"/>
+    
+      <category term="验证码" scheme="blog.wuwenfu.cn/tags/%E9%AA%8C%E8%AF%81%E7%A0%81/"/>
     
   </entry>
   
@@ -825,9 +871,9 @@ if(r==null){
       <category term="博客" scheme="blog.wuwenfu.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="php" scheme="blog.wuwenfu.cn/tags/php/"/>
-    
       <category term="discuz" scheme="blog.wuwenfu.cn/tags/discuz/"/>
+    
+      <category term="php" scheme="blog.wuwenfu.cn/tags/php/"/>
     
   </entry>
   
@@ -887,9 +933,9 @@ if(r==null){
       <category term="博客" scheme="blog.wuwenfu.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="php" scheme="blog.wuwenfu.cn/tags/php/"/>
-    
       <category term="discuz" scheme="blog.wuwenfu.cn/tags/discuz/"/>
+    
+      <category term="php" scheme="blog.wuwenfu.cn/tags/php/"/>
     
   </entry>
   
@@ -916,40 +962,9 @@ if(r==null){
       <category term="博客" scheme="blog.wuwenfu.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="php" scheme="blog.wuwenfu.cn/tags/php/"/>
-    
       <category term="discuz" scheme="blog.wuwenfu.cn/tags/discuz/"/>
     
-  </entry>
-  
-  <entry>
-    <title>糗事采集收费版插件完成</title>
-    <link href="blog.wuwenfu.cn/2016/06/03/%E7%B3%97%E4%BA%8B%E7%99%BE%E7%A7%91%E6%8F%92%E4%BB%B6/"/>
-    <id>blog.wuwenfu.cn/2016/06/03/糗事百科插件/</id>
-    <published>2016-06-03T10:32:05.000Z</published>
-    <updated>2016-06-03T10:35:04.000Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a>
-<p>糗事采集收费版插件完成，好累。主要是定位图片的路径。懒得取源码，所以是模拟数据直接插入数据表。</p>
-<p>持续能更新，好难。希望后期可以做下去。</p>
-<p>代码写的有点糟糕，整理了一下，发现居然无法正常运行，还好有版本控制。恢复过去。</p>
-<p>糗事采集，还剩下一个问题，就是解决单独采集时，不能设置主题封面的问题。</p>
-<p>今天不行了，等下次把。</p>
-<p>今晚去看电影，x战警。期待一下。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      糗事采集收费版插件完成
-    
-    </summary>
-    
-      <category term="博客" scheme="blog.wuwenfu.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
-    
-    
       <category term="php" scheme="blog.wuwenfu.cn/tags/php/"/>
-    
-      <category term="discuz" scheme="blog.wuwenfu.cn/tags/discuz/"/>
     
   </entry>
   

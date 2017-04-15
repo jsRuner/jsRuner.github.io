@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>php图片裁剪类的学习 | 1000 words a Day</title>
+  <title>ueditor的双引号转义引发的问题 | 1000 words a Day</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="php是最好的语言，什么东西都齐全">
+  <meta name="description" content="引号转义">
 <meta property="og:type" content="article">
-<meta property="og:title" content="php图片裁剪类的学习">
-<meta property="og:url" content="blog.wuwenfu.cn/2016/07/31/图片裁剪类库的使用/index.html">
+<meta property="og:title" content="ueditor的双引号转义引发的问题">
+<meta property="og:url" content="blog.wuwenfu.cn/2017/04/15/ueditor的双引号转义引发的问题/index.html">
 <meta property="og:site_name" content="1000 words a Day">
-<meta property="og:description" content="php是最好的语言，什么东西都齐全">
-<meta property="og:updated_time" content="2016-07-31T03:03:47.000Z">
+<meta property="og:description" content="引号转义">
+<meta property="og:updated_time" content="2017-04-15T11:20:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="php图片裁剪类的学习">
-<meta name="twitter:description" content="php是最好的语言，什么东西都齐全">
+<meta name="twitter:title" content="ueditor的双引号转义引发的问题">
+<meta name="twitter:description" content="引号转义">
   
     <link rel="alternative" href="/atom.xml" title="1000 words a Day" type="application/atom+xml">
   
@@ -216,11 +216,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-图片裁剪类库的使用" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-ueditor的双引号转义引发的问题" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/07/31/图片裁剪类库的使用/" class="article-date">
-      <time datetime="2016-07-31T03:01:39.000Z" itemprop="datePublished">2016-07-31</time>
+      <a href="/2017/04/15/ueditor的双引号转义引发的问题/" class="article-date">
+      <time datetime="2017-04-15T11:00:12.000Z" itemprop="datePublished">2017-04-15</time>
 </a>
     </div>
   
@@ -233,7 +233,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      php图片裁剪类的学习
+      ueditor的双引号转义引发的问题
     </h1>
   
 
@@ -248,7 +248,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/图片裁剪/">图片裁剪</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/thinkphp/">thinkphp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ueditor/">ueditor</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -259,104 +259,28 @@
       
           
         <a id="more"></a>
-<h1 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h1><p>难得今天得闲，早上起来，百无聊奈，于是阅读一下微博收藏的技术点。发现了一个php类库。grafika<br>于是写点代码，看看效果。</p>
-<h1 id="类库的文档地址"><a href="#类库的文档地址" class="headerlink" title="类库的文档地址"></a>类库的文档地址</h1><p><a href="http://kosinix.github.io/grafika/smart-crop.html" title="文档地址" target="_blank" rel="external">http://kosinix.github.io/grafika/smart-crop.html</a></p>
-<h1 id="心得体会"><a href="#心得体会" class="headerlink" title="心得体会"></a>心得体会</h1><ol>
-<li>该类库安装方便。支持composer.这是趋势</li>
-<li>文档齐全，简明扼要。老外写东西，文笔真好</li>
-<li>写demo中用的cli命令行运行php代码，发现换行需要使用char(10) 而不是常见的\r\n</li>
-<li>写本博客的时候发现，markdown中插入整段代码，注意tab缩进，否则代码块无法高亮。</li>
-</ol>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><pre><code>require_once &apos;/vendor/autoload.php&apos;; // Change this to the correct path
+<p>撸了一个站，里面使用了富文本,自然首选百度家的ueditor</p>
+<p>本地测试没问题，提交了代码到线上。结果发现富文本无法正常显示。</p>
+<p>遇到这个问题，我首先查看了数据库里存储的值，发现值被二次转义。</p>
+<p>因为这个站，是基于thinkphp框架写的，接受数据是使用的thinkphp的i函数。</p>
+<p>框架会自动进行全局过滤。因此这里修改函数，只接受原生的get和post数据。</p>
+<p>thinkphp获取原始内容的方法</p>
+<pre><code>I(&apos;get.name&apos;,&apos;&apos;,NULL);
+</code></pre><p>二次转义的问题得到解决，但是还无法工作，主要特征就是所有的引号多了一个\</p>
+<p>这个问题让我不明白问题，以为是thinkphp框架的问题。多次百度之后，查询到问题。</p>
+<p>服务器的php版本是5.3 ，</p>
+<pre><code>magic_quotes_gpc=On
+</code></pre><p>magic_quotes_gpc函数在php中的作用是判断解析用户提示的数据，如包括有:post、get、cookie过来的数据增加转义字符“\”，以确保这些数据不会引起程序，特别是数据库语句因为特殊字符引起的污染而出现致命的错误</p>
+<p>只需要设置为off 即可消除那个多余\。 但是服务器是虚拟机主机，我只有ftp的权限。所以只能另想其他方法。</p>
+<p>最后的方法是:</p>
+<pre><code> $data[&apos;intro&apos;] = I(&apos;post.intro&apos;,&apos;&apos;,null);
+if (ini_get(&apos;magic_quotes_gpc&apos;)) {
+     $data[&apos;intro&apos;] = str_replace(&apos;\&amp;quot;&apos;, &apos;&amp;quot;&apos;, $data[&apos;intro&apos;]);
+}
+</code></pre><p>网络上有人建议放在入口文件index.php中，我测试了下，无效。于是还是按上面 进行。</p>
+<p>最后放一下这个问题的来源站点。</p>
+<p><a href="http://www.dengbiao007.com" target="_blank" rel="external">邓彪个人站</a></p>
 
-
-use Grafika\Grafika; // Import package
-
-$editor = Grafika::createEditor(); // Create the best available editor
-
-/*
-$editor-&gt;open( &quot;images/1.jpg&quot; ); // Open jpeg image for editing
-$editor-&gt;resizeFit( 200, 200 ); // Fit an image to 200 x 200 box
-$editor-&gt;save(&quot;images/testResizeFit.jpg&quot;); // Save the image as jpeg
-
-
-//忽略纵横比
-$editor-&gt;open( &quot;images/1.jpg&quot; );
-$editor-&gt;resizeExact( 20, 200 ); 
-$editor-&gt;save(&quot;images/testResizeExact.jpg&quot;);
-//多余的被裁剪
-$editor-&gt;open( &quot;images/1.jpg&quot; );
-$editor-&gt;resizeFill( 20, 200 );
-$editor-&gt;save(&quot;images/testResizeFill.jpg&quot;);
-
-//给宽度，高度自适应
-$editor-&gt;open( &quot;images/1.jpg&quot; );
-$editor-&gt;resizeExactWidth( 100 );
-$editor-&gt;save(&quot;images/testResizeExactWidth.jpg&quot;);
-//给高度，宽度自适应
-$editor-&gt;open( &quot;images/1.jpg&quot; );
-$editor-&gt;resizeExactHeight( 100 );
-$editor-&gt;save(&quot;images/testResizeExactHeight.jpg&quot;);
-
-
-//图片相似的值。0表示相似。1-10表示有区别。超过10则表示不同。26表示图像被裁剪。
-$hammingDistance = $editor-&gt;compare( &quot;images/1.jpg&quot;, &quot;images/2.png&quot; );
-echo $hammingDistance;
-echo chr(10); //换行
-$hammingDistance = $editor-&gt;compare( &quot;images/1.jpg&quot;, &quot;images/testResizeFit.jpg&quot; );
-
-echo $hammingDistance;
-
-
-//消耗太多。确定需要再使用。否则优先使用compare 
-//先比较width height 相同则循环比较像素点。 返回true和false
-$result = $editor-&gt;equal( &quot;images/1.jpg&quot;, &quot;images/2.png&quot; ); // Returns true if images are equal or false if not
-echo chr(10);
-echo $result;
-
-*/
-//将图片切成九宫格
-$input = &apos;images/1.jpg&apos;;
-
-// Top
-$editor-&gt;open($input);
-$editor-&gt;crop(260, 150, &apos;top-left&apos;);
-$editor-&gt;save(&apos;testCrop1.jpg&apos;);
-
-$editor-&gt;open($input);
-$editor-&gt;crop(260, 150, &apos;top-center&apos;);
-$editor-&gt;save(&apos;testCrop2.jpg&apos;);
-
-$editor-&gt;open($input);
-$editor-&gt;crop(260, 150, &apos;top-right&apos;);
-$editor-&gt;save(&apos;testCrop3.jpg&apos;);
-
-// Middle row
-$editor-&gt;open($input);
-$editor-&gt;crop(260, 150, &apos;center-left&apos;);
-$editor-&gt;save(&apos;testCrop4.jpg&apos;);
-
-$editor-&gt;open($input);
-$editor-&gt;crop(260, 150, &apos;center&apos;);
-$editor-&gt;save(&apos;testCrop5.jpg&apos;);
-
-$editor-&gt;open($input);
-$editor-&gt;crop(260, 150, &apos;center-right&apos;);
-$editor-&gt;save(&apos;testCrop6.jpg&apos;);
-
-// Bottom row
-$editor-&gt;open($input);
-$editor-&gt;crop(260, 150, &apos;bottom-left&apos;);
-$editor-&gt;save(&apos;testCrop7.jpg&apos;);
-
-$editor-&gt;open($input);
-$editor-&gt;crop(260, 150, &apos;bottom-center&apos;);
-$editor-&gt;save(&apos;testCrop8.jpg&apos;);
-
-$editor-&gt;open($input);
-$editor-&gt;crop(260, 150, &apos;bottom-right&apos;);
-$editor-&gt;save(&apos;testCrop9.jpg&apos;);
-</code></pre>
       
       
         <div class="page-reward">
@@ -410,13 +334,13 @@ $editor-&gt;save(&apos;testCrop9.jpg&apos;);
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/07/31/图片裁剪类库的使用/">php图片裁剪类的学习</a></p>
+        <p><span>本文标题:</span><a href="/2017/04/15/ueditor的双引号转义引发的问题/">ueditor的双引号转义引发的问题</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 北岸的云 的个人博客">北岸的云</a></p>
-        <p><span>发布时间:</span>2016年07月31日 - 11时01分</p>
-        <p><span>最后更新:</span>2016年07月31日 - 11时03分</p>
+        <p><span>发布时间:</span>2017年04月15日 - 19时00分</p>
+        <p><span>最后更新:</span>2017年04月15日 - 19时20分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/07/31/图片裁剪类库的使用/" title="php图片裁剪类的学习">blog.wuwenfu.cn/2016/07/31/图片裁剪类库的使用/</a>
-            <span class="copy-path" data-clipboard-text="原文: blog.wuwenfu.cn/2016/07/31/图片裁剪类库的使用/　　作者: 北岸的云" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/04/15/ueditor的双引号转义引发的问题/" title="ueditor的双引号转义引发的问题">blog.wuwenfu.cn/2017/04/15/ueditor的双引号转义引发的问题/</a>
+            <span class="copy-path" data-clipboard-text="原文: blog.wuwenfu.cn/2017/04/15/ueditor的双引号转义引发的问题/　　作者: 北岸的云" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -429,18 +353,9 @@ $editor-&gt;save(&apos;testCrop9.jpg&apos;);
 
 <nav id="article-nav">
   
-    <a href="/2016/08/12/为php安装redis扩展/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          php如何安装redis扩展
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/07/19/shell脚本/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">shell脚本的编写</div>
+    <a href="/2017/04/15/放弃图床了/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">别在为图床的问题烦恼了</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -451,7 +366,7 @@ $editor-&gt;save(&apos;testCrop9.jpg&apos;);
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#概要"><span class="toc-number">1.</span> <span class="toc-text">概要</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#类库的文档地址"><span class="toc-number">2.</span> <span class="toc-text">类库的文档地址</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#心得体会"><span class="toc-number">3.</span> <span class="toc-text">心得体会</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#代码"><span class="toc-number">4.</span> <span class="toc-text">代码</span></a></li></ol>
+    
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -508,13 +423,11 @@ $editor-&gt;save(&apos;testCrop9.jpg&apos;);
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/08/12/为php安装redis扩展/" title="上一篇: php如何安装redis扩展">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/07/19/shell脚本/" title="下一篇: shell脚本的编写">
+            <a href="/2017/04/15/放弃图床了/" title="下一篇: 别在为图床的问题烦恼了">
                 <i class="fa fa-angle-right"></i>
             </a>
         
