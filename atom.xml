@@ -726,9 +726,9 @@ if(r==null){
       <category term="博客" scheme="blog.wuwenfu.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="生活" scheme="blog.wuwenfu.cn/tags/%E7%94%9F%E6%B4%BB/"/>
-    
       <category term="南京" scheme="blog.wuwenfu.cn/tags/%E5%8D%97%E4%BA%AC/"/>
+    
+      <category term="生活" scheme="blog.wuwenfu.cn/tags/%E7%94%9F%E6%B4%BB/"/>
     
       <category term="旅游" scheme="blog.wuwenfu.cn/tags/%E6%97%85%E6%B8%B8/"/>
     
@@ -754,9 +754,9 @@ if(r==null){
       <category term="博客" scheme="blog.wuwenfu.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="南京" scheme="blog.wuwenfu.cn/tags/%E5%8D%97%E4%BA%AC/"/>
-    
       <category term="微信" scheme="blog.wuwenfu.cn/tags/%E5%BE%AE%E4%BF%A1/"/>
+    
+      <category term="南京" scheme="blog.wuwenfu.cn/tags/%E5%8D%97%E4%BA%AC/"/>
     
   </entry>
   
