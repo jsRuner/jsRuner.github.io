@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>阅读CodeIgniter手册(一) | 1000 words a Day</title>
+  <title>北岸qq登录插件的昵称乱码问题解决 | 1000 words a Day</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="阅读CodeIgniter手册(一)">
+  <meta name="description" content="昵称乱码">
 <meta property="og:type" content="article">
-<meta property="og:title" content="阅读CodeIgniter手册(一)">
-<meta property="og:url" content="blog.wuwenfu.cn/2016/07/09/重读codeigniter手册/index.html">
+<meta property="og:title" content="北岸qq登录插件的昵称乱码问题解决">
+<meta property="og:url" content="blog.wuwenfu.cn/2017/04/19/北岸qq登录插件的昵称乱码问题解决/index.html">
 <meta property="og:site_name" content="1000 words a Day">
-<meta property="og:description" content="阅读CodeIgniter手册(一)">
-<meta property="og:updated_time" content="2016-07-14T01:12:05.000Z">
+<meta property="og:description" content="昵称乱码">
+<meta property="og:updated_time" content="2017-04-19T05:34:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="阅读CodeIgniter手册(一)">
-<meta name="twitter:description" content="阅读CodeIgniter手册(一)">
+<meta name="twitter:title" content="北岸qq登录插件的昵称乱码问题解决">
+<meta name="twitter:description" content="昵称乱码">
   
     <link rel="alternative" href="/atom.xml" title="1000 words a Day" type="application/atom+xml">
   
@@ -216,11 +216,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-重读codeigniter手册" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-北岸qq登录插件的昵称乱码问题解决" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/07/09/重读codeigniter手册/" class="article-date">
-      <time datetime="2016-07-09T07:45:52.000Z" itemprop="datePublished">2016-07-09</time>
+      <a href="/2017/04/19/北岸qq登录插件的昵称乱码问题解决/" class="article-date">
+      <time datetime="2017-04-19T05:21:40.000Z" itemprop="datePublished">2017-04-19</time>
 </a>
     </div>
   
@@ -233,7 +233,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      阅读CodeIgniter手册(一)
+      北岸qq登录插件的昵称乱码问题解决
     </h1>
   
 
@@ -248,7 +248,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CodeIgniter/">CodeIgniter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/discuz/">discuz</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/inconv/">inconv</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -259,49 +259,19 @@
       
           
         <a id="more"></a>
-<p>写着代码，突然感觉迷惘了。到底我会什么。之前在合肥用的thinkphp，去中新用的公司自己的php框架。来杭州又开始CodeIgniter 最近又看了点yii框架。<br>写着天天平凡的代码，感觉活的太苦闷了。<br>经历太分散，我需要集中。需要去解决CodeIgniter开源的一些问题。<br>一些从手册开始。好好看一遍手册，然后去阅读源码。精通一门框架，为工作，为水平而努力<br>今天主要阅读了</p>
-<ul>
-<li>CodeIgniter URL </li>
-<li>控制器  </li>
-<li>错误处理   </li>
-<li>控制器</li>
-<li>保留名称</li>
-<li>URL路由</li>
-<li>错误处理<br>-以CLI方式运行<br>这些主题。认识到一些心得，之前不曾注意过的  </li>
-</ul>
-<ol>
-<li>site_url 建议产生页面url  base_url 建议用来访问文件或者图片</li>
-<li>控制url 是否为普通的url 。尽量避免，使用框架的url分段模式。否则很多地方无法使用      <pre><code>`$config[&apos;enable_query_strings&apos;]=FALSE;`
-</code></pre></li>
-<li>文件名与类名的问题。 这里指的是控制器。文件名与类名需要大写。 控制器名称与模型名称有区别。模型需要带model</li>
-<li>CodeIgniter 的路由很强大。可以自定义，支持正则和函数调用<pre><code>`// $route[&apos;product/([a-zA-Z]+)/edit/(\d+)&apos;] = function ($product_type, $id){
-</code></pre>return ‘welcome/add/‘ . strtolower($product_type) . ‘/‘ . $id;<br>};`</li>
-<li>CodeIgniter 路由可以使用http动词。在处理restful时特别好用。<br>HTTP 动词（GET、PUT、POST、DELETE、PATCH）<br>  <code>$route[&#39;products&#39;][&#39;put&#39;] = &#39;product/insert&#39;;</code><br>  <code>$route[&#39;products&#39;][&#39;put&#39;] = &#39;product/insert&#39;;</code><br>  如果向products控制器发送 发送Put请求，则会执行product控制器的insert方法。<br>  第二个例子表示 像products+数字组合的url发送时，才执行。</li>
-<li>日志功能需要重视起来。日志的开关与文件夹设置在config文件中<pre><code>`log_message($level, $message, $php_error = FALSE)
-</code></pre>//很重要。调试日志。要求文件夹可写。并开启开关。否则不会产生文件<code>产生的文件是默认是 2016-07-09 16:16:14.php 日志的配置位于。1表示只记录错误信息 0表示禁止日志  默认的日志目录位于根目录下Log文件夹$config[&#39;log_threshold&#39;] = 1;$config[&#39;log_path&#39;] = &#39;&#39;;</code></li>
-<li>基准测试。主要是时间、内测测试。优化程序使用<pre><code>`$this-&gt;benchmark-&gt;mark(&apos;code_start&apos;);
-</code></pre>$this-&gt;benchmark-&gt;mark(‘code_end’);<br>echo $this-&gt;benchmark-&gt;elapsed_time(‘code_start’, ‘code_end’);`</li>
-<li>程序分析类库的使用 。方便追踪问题<pre><code>`$this-&gt;output-&gt;enable_profiler(TRUE);`
-</code></pre></li>
-<li>网页缓存。<pre><code>`$this-&gt;output-&gt;cache($n);` 
-</code></pre>表示缓存页面$n秒 过期自动删除或者需要手动删除。 缓存文件夹要具        备可写权限。只能缓存从view输出的内容。</li>
-<li>控制器的私有方法。添加private即可无法被访问。或者_xxx 也可以。</li>
-<li><p>重新映射 remap方法 表示可以重新映射。例如上面的例子表示访问view方法会被跳转到del_all执行。<br>   `public function _remap($method, $params = array())<br>   {</p>
-<pre><code>$method = &apos;process_&apos;.$method;
- if (method_exists($this, $method))
- {
-     return call_user_func_array(array($this, $method), $params);
- }
- show_404();
-</code></pre><p>   }<br>`<br>这个例子表示。所有访问的方法，会自动添加process_前缀。 然后判断是否存在。存在则执行该方法。</p>
-</li>
-<li><p><code>$route[&#39;translate_uri_dashes&#39;] = FALSE;</code> 该配置没啥用。<br>其主要的效果，就是如果  my-products 则会自动转换为my_product<br>中横线转为下划线。因为连字符无法出现在类名与方法名中。 可以通过该配置实现url中有连字符。</p>
-</li>
-<li><p>index.php入口文件。控制 app目录，系统目录，还有视图目录的安全。</p>
-<p>可以实现代码的安全</p>
-</li>
-</ol>
-
+<p>半年前写的插件,是关于qq登录的。安装量还不错，但是有用户反馈一些问题。</p>
+<p>问题是：安装了本插件，无法正常获取到昵称。gbk版本下获取的是utf-8乱码，转码异常，我自动判断了异常，如果异常则自动兼容，兼容的昵称是qq_123456这样格式的。体验很糟糕。</p>
+<p>之前想去解决，但是无奈，本地难以复现，复现了尝试了多种转码方案，却无法较好的解决。一直拖动今天。</p>
+<p>昨天又一个站长来反馈,于是昨天尝试了解决方法。结果凑效，非常开心。</p>
+<p>代码如下：</p>
+<pre><code>if($_G[&apos;charset&apos;] == &apos;gbk&apos;){
+    // $nickname =   iconv(&quot;utf-8&quot;, &quot;gbk&quot;,$nickname);
+    $nickname = mb_convert_encoding($nickname,&apos;gbk&apos;,&apos;utf-8,gbk&apos;);
+}
+</code></pre><p>查看php相关文档。最终决定<br>iconv 这个函数，存在一些bug。具体Bug描叙<a href="file:///Users/ft521/Library/Application%20Support/Dash/DocSets/PHP/PHP.docset/Contents/Resources/Documents/php.net/manual/en/ref.iconv.html" target="_blank" rel="external">点我</a><br>不建议使用。</p>
+<p>字符相关的操作还是使用</p>
+<pre><code>mb_convert_encoding
+</code></pre>
       
       
         <div class="page-reward">
@@ -355,13 +325,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/07/09/重读codeigniter手册/">阅读CodeIgniter手册(一)</a></p>
+        <p><span>本文标题:</span><a href="/2017/04/19/北岸qq登录插件的昵称乱码问题解决/">北岸qq登录插件的昵称乱码问题解决</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 北岸的云 的个人博客">北岸的云</a></p>
-        <p><span>发布时间:</span>2016年07月09日 - 15时45分</p>
-        <p><span>最后更新:</span>2016年07月14日 - 09时12分</p>
+        <p><span>发布时间:</span>2017年04月19日 - 13时21分</p>
+        <p><span>最后更新:</span>2017年04月19日 - 13时34分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/07/09/重读codeigniter手册/" title="阅读CodeIgniter手册(一)">blog.wuwenfu.cn/2016/07/09/重读codeigniter手册/</a>
-            <span class="copy-path" data-clipboard-text="原文: blog.wuwenfu.cn/2016/07/09/重读codeigniter手册/　　作者: 北岸的云" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/04/19/北岸qq登录插件的昵称乱码问题解决/" title="北岸qq登录插件的昵称乱码问题解决">blog.wuwenfu.cn/2017/04/19/北岸qq登录插件的昵称乱码问题解决/</a>
+            <span class="copy-path" data-clipboard-text="原文: blog.wuwenfu.cn/2017/04/19/北岸qq登录插件的昵称乱码问题解决/　　作者: 北岸的云" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -374,18 +344,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2016/07/09/动听的歌曲/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          推荐一首歌
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/07/08/网易云音乐/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">网易云音乐重写</div>
+    <a href="/2017/04/17/discuz插件开发之北岸验证码(-)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">discuz插件开发之北岸验证码(-)</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -453,13 +414,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/07/09/动听的歌曲/" title="上一篇: 推荐一首歌">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2016/07/08/网易云音乐/" title="下一篇: 网易云音乐重写">
+            <a href="/2017/04/17/discuz插件开发之北岸验证码(-)/" title="下一篇: discuz插件开发之北岸验证码(-)">
                 <i class="fa fa-angle-right"></i>
             </a>
         

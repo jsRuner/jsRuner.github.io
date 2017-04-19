@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="blog.wuwenfu.cn/"/>
-  <updated>2017-04-17T12:18:43.000Z</updated>
+  <updated>2017-04-19T05:34:34.000Z</updated>
   <id>blog.wuwenfu.cn/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>北岸qq登录插件的昵称乱码问题解决</title>
+    <link href="blog.wuwenfu.cn/2017/04/19/%E5%8C%97%E5%B2%B8qq%E7%99%BB%E5%BD%95%E6%8F%92%E4%BB%B6%E7%9A%84%E6%98%B5%E7%A7%B0%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"/>
+    <id>blog.wuwenfu.cn/2017/04/19/北岸qq登录插件的昵称乱码问题解决/</id>
+    <published>2017-04-19T05:21:40.000Z</published>
+    <updated>2017-04-19T05:34:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<p>半年前写的插件,是关于qq登录的。安装量还不错，但是有用户反馈一些问题。</p>
+<p>问题是：安装了本插件，无法正常获取到昵称。gbk版本下获取的是utf-8乱码，转码异常，我自动判断了异常，如果异常则自动兼容，兼容的昵称是qq_123456这样格式的。体验很糟糕。</p>
+<p>之前想去解决，但是无奈，本地难以复现，复现了尝试了多种转码方案，却无法较好的解决。一直拖动今天。</p>
+<p>昨天又一个站长来反馈,于是昨天尝试了解决方法。结果凑效，非常开心。</p>
+<p>代码如下：</p>
+<pre><code>if($_G[&apos;charset&apos;] == &apos;gbk&apos;){
+    // $nickname =   iconv(&quot;utf-8&quot;, &quot;gbk&quot;,$nickname);
+    $nickname = mb_convert_encoding($nickname,&apos;gbk&apos;,&apos;utf-8,gbk&apos;);
+}
+</code></pre><p>查看php相关文档。最终决定<br>iconv 这个函数，存在一些bug。具体Bug描叙<a href="file:///Users/ft521/Library/Application%20Support/Dash/DocSets/PHP/PHP.docset/Contents/Resources/Documents/php.net/manual/en/ref.iconv.html" target="_blank" rel="external">点我</a><br>不建议使用。</p>
+<p>字符相关的操作还是使用</p>
+<pre><code>mb_convert_encoding
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      昵称乱码
+    
+    </summary>
+    
+      <category term="博客" scheme="blog.wuwenfu.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="discuz" scheme="blog.wuwenfu.cn/tags/discuz/"/>
+    
+      <category term="inconv" scheme="blog.wuwenfu.cn/tags/inconv/"/>
+    
+  </entry>
   
   <entry>
     <title>discuz插件开发之北岸验证码(-)</title>
@@ -49,9 +86,9 @@
       <category term="博客" scheme="blog.wuwenfu.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="php" scheme="blog.wuwenfu.cn/tags/php/"/>
-    
       <category term="discuz" scheme="blog.wuwenfu.cn/tags/discuz/"/>
+    
+      <category term="php" scheme="blog.wuwenfu.cn/tags/php/"/>
     
   </entry>
   
@@ -171,9 +208,9 @@ if (ini_get(&apos;magic_quotes_gpc&apos;)) {
       <category term="博客" scheme="blog.wuwenfu.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="验证码" scheme="blog.wuwenfu.cn/tags/%E9%AA%8C%E8%AF%81%E7%A0%81/"/>
-    
       <category term="php" scheme="blog.wuwenfu.cn/tags/php/"/>
+    
+      <category term="验证码" scheme="blog.wuwenfu.cn/tags/%E9%AA%8C%E8%AF%81%E7%A0%81/"/>
     
   </entry>
   
@@ -911,9 +948,9 @@ if(r==null){
       <category term="博客" scheme="blog.wuwenfu.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="php" scheme="blog.wuwenfu.cn/tags/php/"/>
-    
       <category term="discuz" scheme="blog.wuwenfu.cn/tags/discuz/"/>
+    
+      <category term="php" scheme="blog.wuwenfu.cn/tags/php/"/>
     
   </entry>
   
@@ -942,40 +979,6 @@ if(r==null){
       <category term="生活" scheme="blog.wuwenfu.cn/tags/%E7%94%9F%E6%B4%BB/"/>
     
       <category term="端午" scheme="blog.wuwenfu.cn/tags/%E7%AB%AF%E5%8D%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一切从收费开始</title>
-    <link href="blog.wuwenfu.cn/2016/06/06/%E6%94%B6%E8%B4%B9%E9%97%AE%E9%A2%98%E4%B9%8B%E6%88%91%E8%A7%81/"/>
-    <id>blog.wuwenfu.cn/2016/06/06/收费问题之我见/</id>
-    <published>2016-06-06T11:47:37.000Z</published>
-    <updated>2016-06-06T11:57:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a>
-<p>突然想到360,以前觉得他很好。现在发现他也不过如此。 免费，这个词，大家都喜欢。</p>
-<p>免费的礼物，免费的奖品，等等，中国是一个到处都是免费口号的国家。</p>
-<p>但是免费吃过的亏，上过的当，真的好多。</p>
-<p>只有收费，才能提供更好的服务。</p>
-<p>提供免费的服务，始终不长久。一来自己的服务被人无视，二来失去持续的动力。</p>
-<p>今天发布一个插件，收费1元。愿意付这1元，说明是值得服务的站长。连1元都不给的，还</p>
-<p>是不要认识的好。</p>
-<p>好忙，不知道在dz平台是否可以养活自己。如果可以就好了。不想上班了。</p>
-<p><a href="http://addon.discuz.com/?@htt_toutiao.plugin" title="插件安装地址" target="_blank" rel="external">http://addon.discuz.com/?@htt_toutiao.plugin</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      一切从收费开始
-    
-    </summary>
-    
-      <category term="博客" scheme="blog.wuwenfu.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-      <category term="php" scheme="blog.wuwenfu.cn/tags/php/"/>
-    
-      <category term="discuz" scheme="blog.wuwenfu.cn/tags/discuz/"/>
     
   </entry>
   
