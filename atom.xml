@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="blog.wuwenfu.cn/"/>
-  <updated>2017-08-04T03:56:39.000Z</updated>
+  <updated>2017-08-17T00:16:43.000Z</updated>
   <id>blog.wuwenfu.cn/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于swoole实现的聊天室功能</title>
+    <link href="blog.wuwenfu.cn/2017/08/17/%E8%81%8A%E5%A4%A9%E5%AE%A4/"/>
+    <id>blog.wuwenfu.cn/2017/08/17/聊天室/</id>
+    <published>2017-08-17T00:10:38.000Z</published>
+    <updated>2017-08-17T00:16:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>
+<p>一直想做个qq类似的聊天工具，可惜自己是个web开发者。没思路如何去实现。最近看看swoole相关的文档，萌生写个聊天的工具。<br>于是不多说，马上行动。</p>
+<p>写了2个版本。</p>
+<ul>
+<li>第一个版本 <a href="http://60.205.202.109/wechat.html" target="_blank" rel="external">简洁版</a></li>
+<li>第二个版本 <a href="http://60.205.202.109/wechat/index.html" target="_blank" rel="external">美化版</a></li>
+<li>源码地址 <a href="https://github.com/jsRuner/666coder.com" target="_blank" rel="external">https://github.com/jsRuner/666coder.com</a></li>
+</ul>
+<p>基本核心代码已经实现。剩下就是添枝加叶了。最近工作较忙，有空再处理。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      闲来无事,看看swoole,看到websocket，于是想写个聊天小工具
+    
+    </summary>
+    
+      <category term="博客" scheme="blog.wuwenfu.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="php" scheme="blog.wuwenfu.cn/tags/php/"/>
+    
+      <category term="swool" scheme="blog.wuwenfu.cn/tags/swool/"/>
+    
+      <category term="websocet" scheme="blog.wuwenfu.cn/tags/websocet/"/>
+    
+  </entry>
   
   <entry>
     <title>杭州浪浪浪水乐园</title>
@@ -961,37 +996,11 @@ if(r==null){
       <category term="博客" scheme="blog.wuwenfu.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="南京" scheme="blog.wuwenfu.cn/tags/%E5%8D%97%E4%BA%AC/"/>
-    
       <category term="生活" scheme="blog.wuwenfu.cn/tags/%E7%94%9F%E6%B4%BB/"/>
     
-      <category term="旅游" scheme="blog.wuwenfu.cn/tags/%E6%97%85%E6%B8%B8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>南京我来了</title>
-    <link href="blog.wuwenfu.cn/2016/06/20/%E5%8D%97%E4%BA%AC/"/>
-    <id>blog.wuwenfu.cn/2016/06/20/南京/</id>
-    <published>2016-06-20T02:41:14.000Z</published>
-    <updated>2016-06-20T02:42:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a>
-<p>第一次去南京。希望一切顺利。<br><img src="http://o8cq9a9tm.bkt.clouddn.com/Screenshot_2016-06-20-08-47-02.png" alt=""></p>
-]]></content>
-    
-    <summary type="html">
-    
-      南京我来了
-    
-    </summary>
-    
-      <category term="博客" scheme="blog.wuwenfu.cn/categories/%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-      <category term="微信" scheme="blog.wuwenfu.cn/tags/%E5%BE%AE%E4%BF%A1/"/>
-    
       <category term="南京" scheme="blog.wuwenfu.cn/tags/%E5%8D%97%E4%BA%AC/"/>
+    
+      <category term="旅游" scheme="blog.wuwenfu.cn/tags/%E6%97%85%E6%B8%B8/"/>
     
   </entry>
   
